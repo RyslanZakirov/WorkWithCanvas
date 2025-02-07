@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es5",      
+      "module": "esnext",   
+      "moduleResolution": "node", 
+      "outDir": "./jsFiles", 
+    //   "outFile": "./jsFiles/bundle.js",
+      "sourceMap": true, 
+      "strict": true,       
+      "esModuleInterop": true  
+    },
+    "include": ["./tsFiles/**/*.ts"] 
+  }
