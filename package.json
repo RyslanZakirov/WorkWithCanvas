@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "dev": "bun build ./tsFiles/index.ts --outfile ./jsFiles/index.js --watch",
+        "hot": "bun --hot ./tsFiles/index.ts"
+    }
+}
