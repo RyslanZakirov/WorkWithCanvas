@@ -37,4 +37,8 @@ export class ClickObserver{
         this.nodeList.forEach(node => node.handleClick(coords))
     }
 
+    clearNodeList(): void {
+        this.nodeList = []
+    }
+
 }
