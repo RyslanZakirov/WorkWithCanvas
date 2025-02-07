@@ -2,6 +2,8 @@ import { Circle } from "./classes/Circle"
 import { CircleEventHandler } from "./classes/CircleEventHandler"
 import { ClickObserver } from "./ClickObserver"
 
+import { create20Circle } from "./testActions/create20Circle" /// Тестовое создание 20-и окружностей
+
 document.addEventListener("DOMContentLoaded", e => {
     
     const canvas : HTMLCanvasElement = document.querySelector("#canvas") as HTMLCanvasElement
@@ -11,15 +13,21 @@ document.addEventListener("DOMContentLoaded", e => {
     canvas.height = 600
 
     const clickObserver = new ClickObserver(canvas)
-    const sample = new Circle(23, 100, 100, 20, ctx)
-    clickObserver.addNewNode(sample.getHandlerEventt() as CircleEventHandler)
+    const circleArr = create20Circle()
+    
+    circleArr.forEach(circle => {
+        clickObserver.addNewNode(circle.getHandlerEvent() as CircleEventHandler)
+    })
+
 
 
     const gameLoop = () => {
         
         ctx.clearRect(0, 0, canvas.width, canvas.height)    
-        sample.updatePosition()
-        sample.getRenderObject()?.draw()
+        circleArr.forEach(circle => {
+            circle.updatePosition()
+            circle.getRenderObject()?.draw()
+        })
 
         requestAnimationFrame(gameLoop)
     }

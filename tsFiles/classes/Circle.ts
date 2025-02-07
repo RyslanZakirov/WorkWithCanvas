@@ -29,7 +29,7 @@ export class Circle implements INode{
     getRenderObject(): CircleRenderObject | null{
         return this.renderObject
     }
-    getHandlerEventt(): CircleEventHandler | null{
+    getHandlerEvent(): CircleEventHandler | null{
         return this.handlerEvent
     }
     
