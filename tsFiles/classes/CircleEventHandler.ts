@@ -1,9 +1,9 @@
 import { EventHandler } from "../anstractClasses/EventHandler";
-import { Circle } from "./GameCircle";
+import { GameCircle } from "./GameCircle";
 import { Vector2D } from "../types/Vector2D";
 
 export class CircleEventHandler extends EventHandler{
-    constructor(public node: Circle){
+    constructor(public node: GameCircle){
         super(node)
     }
 

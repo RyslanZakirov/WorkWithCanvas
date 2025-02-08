@@ -26,6 +26,12 @@ export class GameCircle extends Circle{
         }
     }
 
+    render(): void{
+        if(this.renderObject){
+            this.renderObject.draw()
+        }
+    }
+
     getRenderObject(): CircleRenderObject | null{
         return this.renderObject
     }

@@ -7,6 +7,8 @@ export abstract class Rectangle implements INode{
         public y: number,
         public width: number,
         public height: number,
-        public ctx: CanvasRenderingContext2D)
+        public ctx: CanvasRenderingContext2D,
+        public text?: string
+    )
     {}
 }
