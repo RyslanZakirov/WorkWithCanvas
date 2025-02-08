@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", e => {
         clickObserver.addNewNode(circle.getHandlerEvent() as CircleEventHandler)
     })
 
+    clickObserver.addNewNode(btn.getEventHandler())
 
     const gameLoop = () => {
         
