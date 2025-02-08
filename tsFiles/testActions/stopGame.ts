@@ -1,4 +1,4 @@
-import { Circle } from "../classes/Circle"
+import { GameCircle } from "../classes/GameCircle"
 
 
 export interface ILoadData{
@@ -7,10 +7,10 @@ export interface ILoadData{
     y: number,
     radius: number
 }
-export function stopGame(gameObjects: Circle[], ctx: CanvasRenderingContext2D){
+export function stopGame(gameObjects: GameCircle[], ctx: CanvasRenderingContext2D){
     
     const savedData : ILoadData[] = []
-    gameObjects.forEach((node: Circle) => {
+    gameObjects.forEach((node: GameCircle) => {
         savedData.push({
             x: node.x,
             y: node.y,
@@ -23,15 +23,15 @@ export function stopGame(gameObjects: Circle[], ctx: CanvasRenderingContext2D){
 
     localStorage.setItem("gameObjects", JSON.stringify(savedData))
 
-    function loadData(): Circle[] {
+    function loadData(): GameCircle[] {
         
         const data : string | null = localStorage.getItem("gameObjects")
         if(data){
             const tempArray : ILoadData[] = JSON.parse(data)
-            const circleList : Circle[] = []
+            const circleList : GameCircle[] = []
             
             tempArray.forEach(object => {
-                circleList.push(new Circle(object.id, object.x, object.y, object.radius, ctx))
+                circleList.push(new GameCircle(object.id, object.x, object.y, object.radius, ctx))
             })
             return circleList
         }else{

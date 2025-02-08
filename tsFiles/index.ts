@@ -1,4 +1,4 @@
-import { Circle } from "./classes/Circle"
+import { GameCircle } from "./classes/GameCircle"
 import { CircleEventHandler } from "./classes/CircleEventHandler"
 import { ClickObserver } from "./ClickObserver"
 

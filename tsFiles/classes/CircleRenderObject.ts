@@ -1,4 +1,4 @@
-import { Circle } from "./Circle";
+import { Circle } from "./GameCircle";
 import { RenderObject } from "../anstractClasses/RenderObject";
 
 export class CircleRenderObject extends RenderObject{

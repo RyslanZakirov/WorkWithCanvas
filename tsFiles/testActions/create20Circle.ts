@@ -1,12 +1,12 @@
-import { Circle } from "../classes/Circle";
+import { GameCircle } from "../classes/GameCircle";
 export function create20Circle(){
     
     const canvas : HTMLCanvasElement = <HTMLCanvasElement>document.querySelector("#canvas")
     const ctx : CanvasRenderingContext2D = canvas.getContext("2d") as CanvasRenderingContext2D
-    const circleArr: Circle[] = [] 
+    const circleArr: GameCircle[] = [] 
     
     for(let i = 0; i < 20; i++){
-        circleArr.push(new Circle(
+        circleArr.push(new GameCircle(
             i,
             Math.round(Math.random() * (canvas.width - 50) + 25),
             -30,

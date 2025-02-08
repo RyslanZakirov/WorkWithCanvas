@@ -5,5 +5,7 @@ export interface INode{
     height?: number,
     width?: number,
     radius?: number,
-    ctx?: CanvasRenderingContext2D
+    ctx?: CanvasRenderingContext2D,
+    draw?:() => void,
+    updatePosition?: () => void
 }

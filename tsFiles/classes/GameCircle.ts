@@ -1,9 +1,8 @@
-import { RenderObject } from "../anstractClasses/RenderObject";
-import { INode } from "../interfaces/INode";
+import { Circle } from "../anstractClasses/Circle";
 import { CircleRenderObject } from "./CircleRenderObject"
 import { CircleEventHandler } from "./CircleEventHandler"
 
-export class Circle implements INode{
+export class GameCircle extends Circle{
     
     private renderObject: CircleRenderObject | null = null
     private handlerEvent: CircleEventHandler | null = null
@@ -15,6 +14,7 @@ export class Circle implements INode{
         public radius: number,
         public ctx: CanvasRenderingContext2D)
     {
+        super(id, x, y, radius, ctx)
         this.renderObject = new CircleRenderObject(this)
         this.handlerEvent = new CircleEventHandler(this)
     }

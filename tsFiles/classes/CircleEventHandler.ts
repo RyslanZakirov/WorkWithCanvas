@@ -1,5 +1,5 @@
 import { EventHandler } from "../anstractClasses/EventHandler";
-import { Circle } from "./Circle";
+import { Circle } from "./GameCircle";
 import { Vector2D } from "../types/Vector2D";
 
 export class CircleEventHandler extends EventHandler{
