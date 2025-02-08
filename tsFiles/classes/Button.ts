@@ -1,10 +1,10 @@
-import { RectRenderObject } from "./RectRenderObject";
+import { ButtonRenderObject } from "./ButtonRenderObject";
 import { Rectangle } from "../anstractClasses/Rectangle";
 import { RectEventHandler } from "./RectEventHandler";
 
 export class Button extends Rectangle{
     
-    private renderObject: RectRenderObject;
+    private renderObject: ButtonRenderObject;
     private handlerEvent: RectEventHandler;
     
     constructor(
@@ -18,7 +18,7 @@ export class Button extends Rectangle{
     )
     {
         super(id, x, y, width, height, ctx, text)
-        this.renderObject = new RectRenderObject(this, text)
+        this.renderObject = new ButtonRenderObject(this, text)
         this.handlerEvent = new RectEventHandler(this)
     }
 

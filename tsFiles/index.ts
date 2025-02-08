@@ -1,4 +1,6 @@
 import { Button } from "./classes/Button"
+import { StartMenuScene } from "./classes/StartMenuScene"
+import { Label } from "./classes/Label"
 import { CircleEventHandler } from "./classes/CircleEventHandler"
 import { ClickObserver } from "./ClickObserver"
 
@@ -13,6 +15,8 @@ document.addEventListener("DOMContentLoaded", e => {
     canvas.height = 600
 
     const btn : Button = new Button(100, 100, 100, 200, 80, ctx, "Test button")
+    const startMenu : StartMenuScene = new StartMenuScene(412, ctx)
+    const label : Label = new Label(412, 100, 400, 200, 100, ctx, "Test Label")
 
     const clickObserver = new ClickObserver(canvas)
     let circleArr = create20Circle()
@@ -32,6 +36,8 @@ document.addEventListener("DOMContentLoaded", e => {
         })
 
         btn.render()
+        // startMenu.render()
+        label.render()
 
         requestAnimationFrame(gameLoop)
     }

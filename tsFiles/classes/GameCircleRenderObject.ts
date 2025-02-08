@@ -1,8 +1,8 @@
-import { Circle } from "./GameCircle";
+import { GameCircle } from "./GameCircle";
 import { RenderObject } from "../anstractClasses/RenderObject";
 
-export class CircleRenderObject extends RenderObject{
-    constructor(public node: Circle){
+export class GameCircleRenderObject extends RenderObject{
+    constructor(public node: GameCircle){
         super(node)
     }
 

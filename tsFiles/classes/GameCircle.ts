@@ -1,10 +1,10 @@
 import { Circle } from "../anstractClasses/Circle";
-import { CircleRenderObject } from "./CircleRenderObject"
+import { GameCircleRenderObject } from "./GameCircleRenderObject"
 import { CircleEventHandler } from "./CircleEventHandler"
 
 export class GameCircle extends Circle{
     
-    private renderObject: CircleRenderObject | null = null
+    private renderObject: GameCircleRenderObject | null = null
     private handlerEvent: CircleEventHandler | null = null
     
     constructor(
@@ -15,7 +15,7 @@ export class GameCircle extends Circle{
         public ctx: CanvasRenderingContext2D)
     {
         super(id, x, y, radius, ctx)
-        this.renderObject = new CircleRenderObject(this)
+        this.renderObject = new GameCircleRenderObject(this)
         this.handlerEvent = new CircleEventHandler(this)
     }
 
@@ -32,7 +32,7 @@ export class GameCircle extends Circle{
         }
     }
 
-    getRenderObject(): CircleRenderObject | null{
+    getRenderObject(): GameCircleRenderObject | null{
         return this.renderObject
     }
     getHandlerEvent(): CircleEventHandler | null{

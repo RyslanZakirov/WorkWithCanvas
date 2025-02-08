@@ -1,11 +1,11 @@
 export interface INode{
     id: number,
-    x: number,
-    y: number,
+    x?: number,
+    y?: number,
     height?: number,
     width?: number,
     radius?: number,
     ctx?: CanvasRenderingContext2D,
-    draw?:() => void,
-    updatePosition?: () => void
+    // draw?:() => void,
+    // updatePosition?: () => void
 }

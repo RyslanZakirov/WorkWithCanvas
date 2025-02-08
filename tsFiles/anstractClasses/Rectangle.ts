@@ -1,6 +1,8 @@
 import { INode } from "../interfaces/INode";
 
+
 export abstract class Rectangle implements INode{
+    
     constructor(
         public id: number,
         public x: number,

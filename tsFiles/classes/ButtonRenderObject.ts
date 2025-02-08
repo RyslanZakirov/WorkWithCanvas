@@ -1,7 +1,7 @@
 import { RenderObject } from "../anstractClasses/RenderObject";
 import { Rectangle } from "../anstractClasses/Rectangle"
 
-export class RectRenderObject extends RenderObject{
+export class ButtonRenderObject extends RenderObject{
     constructor(public node: Rectangle, public text?: string){
         super(node, text)
     }
