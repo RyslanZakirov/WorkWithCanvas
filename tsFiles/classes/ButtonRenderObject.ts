@@ -6,7 +6,7 @@ export class ButtonRenderObject extends RenderObject{
         super(node, text)
     }
 
-    draw(){
+    render(){
         this.node.ctx.fillStyle = "orange" // Тестовый код для проверки работоспособности
         this.node.ctx.fillRect(this.node.x, this.node.y, this.node.width, this.node.height)
         // console.log(this.text);

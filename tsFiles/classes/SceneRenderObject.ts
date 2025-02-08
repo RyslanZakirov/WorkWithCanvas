@@ -6,7 +6,7 @@ export class SceneRenderObject extends RenderObject{
         super(node)
     }
 
-    draw(): void {
+    render(): void {
         const canvas = this.node.ctx.canvas
         this.node.ctx.fillStyle = "yellow"
         this.node.ctx.fillRect(0, 0, canvas.width, canvas.height)

@@ -28,7 +28,7 @@ export class GameCircle extends Circle{
 
     render(): void{
         if(this.renderObject){
-            this.renderObject.draw()
+            this.renderObject.render()
         }
     }
 

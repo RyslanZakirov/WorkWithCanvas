@@ -23,7 +23,7 @@ export class Button extends Rectangle{
     }
 
     render(): void {
-        this.renderObject.draw()
+        this.renderObject.render()
     }
     
     getEventHandler(): RectEventHandler {

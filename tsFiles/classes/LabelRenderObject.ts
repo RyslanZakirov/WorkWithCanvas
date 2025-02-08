@@ -6,7 +6,7 @@ export class LabelRenderObject extends RenderObject{
         super(node)
     }
 
-    draw(): void {
+    render(): void {
         this.node.ctx.fillStyle = "red"
         this.node.ctx.font = "22px sans"
         this.node.ctx.textAlign = "center"

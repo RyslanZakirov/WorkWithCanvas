@@ -6,7 +6,7 @@ export class GameCircleRenderObject extends RenderObject{
         super(node)
     }
 
-    draw(): void {
+    render(): void {
         this.node.ctx.beginPath();
         this.node.ctx.arc(this.node.x, this.node.y, this.node.radius, 0, 2 * Math.PI);
         this.node.ctx.strokeStyle = "red" // Временное решение

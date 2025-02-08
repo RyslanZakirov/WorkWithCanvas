@@ -20,6 +20,6 @@ export class Label extends Rectangle{
     }
 
     render(): void {
-        this.renderObject.draw()
+        this.renderObject.render()
     }
 }
